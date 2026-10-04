@@ -1,0 +1,28 @@
+name: Checking Lint errors
+on:
+  push:
+    branches:
+    - "*"
+  pull_request:
+    branches:
+    - "*"
+jobs:
+  Linting-errors:
+
+    name: Performing lint and formatting  of the application
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          run: corepack-enable
+      - name: install 
+        run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Format
+        run: yarn format
