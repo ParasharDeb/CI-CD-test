@@ -8,7 +8,7 @@ on:
       -"*"
 jobs:
   Checking-lint-and-Format:
-    runs-on: Ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Cloning the github repository
         uses: actions/checkout@v4
@@ -19,4 +19,4 @@ jobs:
       - name: Lint check
         run: bun lint
       - name: Format Check
-        run: bun Format
+        run: bun format
