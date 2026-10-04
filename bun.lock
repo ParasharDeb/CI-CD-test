@@ -5,6 +5,7 @@
     "": {
       "name": "test",
       "devDependencies": {
+        "@babel/preset-typescript": "^8.0.1",
         "prettier": "3.9.6",
         "turbo": "^2.11.7",
         "typescript": "7.0.2",
