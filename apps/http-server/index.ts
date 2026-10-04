@@ -10,6 +10,15 @@ app.post("/signin", async (req, res) => {
       name,
       email,
     },
+
+
+
+
+
+
+
+
+    
   });
   res.json({
     id: user.id,
