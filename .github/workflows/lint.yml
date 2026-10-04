@@ -1,22 +1,22 @@
-name: Check Linting and Format errors
+name: Checking out the Lint and Format errors
 on:
   push:
     branches:
-      - "*"
+      -"*"
   pull_request:
     branches:
-      - "*"
+      -"*"
 jobs:
-  checking-linting:
+  Checking-lint-and-Format:
     runs-on: Ubuntu-latest
     steps:
-      - name: Cloning the repository
+      - name: Cloning the github repository
         uses: actions/checkout@v4
       - name: Installing bun
         uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-      - name: Lint_errors
+      - name: installing dependencies
+        run: bun install
+      - name: Lint check
         run: bun lint
-      - name: Format_errors
-        run: bun format
+      - name: Format Check
+        run: bun Format
